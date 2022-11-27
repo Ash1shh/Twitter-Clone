@@ -1,5 +1,5 @@
 // type definition file
-
+//type
 export interface Tweet extends TweetBody{
     _id: string
     _createdAt: string
