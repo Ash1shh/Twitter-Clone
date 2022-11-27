@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { Comment, Tweet } from '../typings'
+import { Comment, CommentBody, Tweet } from '../typings'
 import TimeAgo from 'react-timeago'
 import { ChatBubbleLeftRightIcon, HeartIcon, ArrowsRightLeftIcon, ArrowUpTrayIcon } from '@heroicons/react/24/outline'
 import { fetchComments } from '../utils/fetchComments'
-
+import toast from 'react-hot-toast'
+import { useSession } from 'next-auth/react'
 interface Props {
     tweet: Tweet
 }
 function Tweet({ tweet }: Props) {
 
+    const [commentBoxVisible, setCommentBoxVisible] = useState<boolean>(false)
+    const [input, setInput] = useState<string>('')
     const [comments, setComments] = useState<Comment[]>([])
+    const { data: session } = useSession()
+
     const refreshComments = async () => {
         const Comments: Comment[] = await fetchComments(tweet._id)
         setComments(Comments)
@@ -18,7 +23,36 @@ function Tweet({ tweet }: Props) {
     useEffect(() => {
         refreshComments()
     }, [])
+
     console.log(comments)
+
+    const handleSubmitComment = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault()
+
+        const commentToast = toast.loading('Posting Comment...')
+
+        // Comment logic
+        const comment: CommentBody = {
+            comment: input,
+            tweetId: tweet._id,
+            username: session?.user?.name || 'Unknown User',
+            profileImg: session?.user?.image || 'https://www.marismith.com/wp-content/uploads/2014/07/facebook-profile-blank-face.jpeg',
+        }
+
+        const result = await fetch(`/api/addComment`, {
+            body: JSON.stringify(comment),
+            method: 'POST',
+        })
+
+        console.log('WOOHOO we made it', result)
+        toast.success('Comment Posted!', {
+            id: commentToast,
+        })
+
+        setInput('')
+        setCommentBoxVisible(false)
+        refreshComments()
+    }
 
     return (
         <div className="flex flex-col space-x-3 border-y border-gray-100 p-5">
@@ -54,7 +88,10 @@ function Tweet({ tweet }: Props) {
             </div>
 
             <div className="flex justify-between mt-5">
-                <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
+                <div
+                    onClick={ () => session && setCommentBoxVisible(!commentBoxVisible)}
+                    // onClick={() => setCommentBoxVisible(!commentBoxVisible)}
+                    className="flex cursor-pointer items-center space-x-3 text-gray-500">
                     <ChatBubbleLeftRightIcon className="h-5 w-5" />
                     <p>{comments.length}</p>
                 </div>
@@ -71,6 +108,27 @@ function Tweet({ tweet }: Props) {
                     <ArrowUpTrayIcon className="h-5 w-5" />
                 </div>
             </div>
+
+
+            {/* Comment Box logic */}
+            {commentBoxVisible && (
+                <form
+                    className="mt-3 flex space-x-3">
+                    <input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        className="flex-1 rounded-lg bg-gray-100 p-2 outline-none"
+                        type="text"
+                        placeholder="Write a comment..."
+                    />
+                    <button disabled={!input}
+                        type="submit"
+                        onClick={handleSubmitComment}
+                        className="text-twitter disabled:text-gray-200">
+                        Post
+                    </button>
+                </form>
+            )}
 
             {/* Show comments */}
             {comments?.length > 0 && (
@@ -100,7 +158,7 @@ function Tweet({ tweet }: Props) {
                     ))
                     }
                 </div>
-            )}            
+            )}
 
         </div>
     )

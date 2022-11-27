@@ -15,7 +15,7 @@ function Widgets() {
             </div>
 
             {/* Twitter embed */}
-            <div className="p-1 mt-1">
+            <div className="p-1 mt-1 scrollbar-hide">
             <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="pluto0p"
