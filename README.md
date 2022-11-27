@@ -53,7 +53,7 @@
 ### :camera: Screenshots
 
 <div align="center" display='flex'>
-<a href="https://twitterclone-gamma.vercel.app"><img width='800rem'  src='https://user-images.githubusercontent.com/87669361/204130306-b620935a-c281-414d-84f2-1847041597fd.jpg' alt='image'/></a>
+<img width='800rem'  src='https://user-images.githubusercontent.com/87669361/204130306-b620935a-c281-414d-84f2-1847041597fd.jpg' alt='image'/>
 </div>
 
 <br />
