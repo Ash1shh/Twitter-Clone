@@ -11,7 +11,7 @@
   
 <!-- Badges -->
 
-<a href="" target="_blank">![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)</a>
+![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
 ![](https://img.shields.io/badge/Maintained-Yes-indigo)
 ![](https://img.shields.io/github/forks/Ash1shh/Twitter-Clone.svg)
 ![](https://img.shields.io/github/stars/Ash1shh/Twitter-Clone.svg)
@@ -59,7 +59,7 @@
 <br />
 
 
-## <a href="" target="_blank">LIVE DEMO 💥</a>
+## <a>LIVE DEMO 💥</a>
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 ![forthebadge](https://forthebadge.com/images/badges/for-you.svg)
@@ -112,11 +112,36 @@
     </tr>
 </table>
 
+![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![](https://img.shields.io/badge/next.js-20232A?style=for-the-badge&logo=next.js&logoColor=61DAFB)
+![](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+
 ## 	:toolbox: Getting Started
 ### :bangbang: Prerequisites
 - Sign up for a Sanity account <a href='https://www.sanity.io'>HERE</a>
 - Install Node JS in your computer <a href='https://nodejs.org/en/'>HERE</a>
 
+
+<!-- Run Locally -->
+### :running: Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Ash1shh/Twitter-Clone.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+Start the server
+
+```bash
+  npm run dev
+```
 <!-- Env Variables -->
 ### :key: Environment Variables
 
@@ -144,80 +169,6 @@ To run this project, you will need to add the following environment variables to
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### :gear: Installation
-
-![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![](https://img.shields.io/badge/next.js-20232A?style=for-the-badge&logo=next.js&logoColor=61DAFB)
-
-Install my-project with npm
-```
-npx create-next-app@latest --ts my-project
-```
-```
-cd my-project
-```
-
-Install dependencies
-
-### :test_tube: Install Tailwind CSS with Next.js
-#### Install Tailwind CSS
-![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both ``tailwind.config.js`` and ``postcss.config.js``.
-
-```
-npm install -D tailwindcss postcss autoprefixer
-```
-```
-npx tailwindcss init -p
-```
-#### Configure your template paths
-Add the paths to all of your template files in your ``tailwind.config.js`` file.
-<br>
-```
-module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-#### Add the Tailwind directives to your CSS
-Add the ``@tailwind`` directives for each of Tailwind’s layers to your ``./styles/globals.css`` file.
-```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-Install dependencies
-
-<a href="https://github.com/Ash1shh/Twitter-Clone/blob/main/package.json" target="_blank">🔶 Dependency Info</a>
-
-<!-- Run Locally -->
-### :running: Run Locally
-
-![](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-
-Clone the project
-
-```bash
-  git clone https://github.com/Ash1shh/Twitter-Clone.git
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-Start the server
-
-```bash
-  npm run dev
-```
 
 <hr />
 
