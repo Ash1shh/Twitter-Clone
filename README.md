@@ -11,7 +11,7 @@
   
 <!-- Badges -->
 
-![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
+<a href="https://twitti-clone.vercel.app/" target="_blank">![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
 ![](https://img.shields.io/badge/Maintained-Yes-indigo)
 ![](https://img.shields.io/github/forks/Ash1shh/Twitter-Clone.svg)
 ![](https://img.shields.io/github/stars/Ash1shh/Twitter-Clone.svg)
@@ -20,7 +20,7 @@
 
    
 <h4>
-    <a href="">View Demo</a>
+    <a href="https://twitti-clone.vercel.app/">View Demo</a>
   <span> · </span>
     <a href="https://github.com/Ash1shh/Twitter-Clone/blob/main/README.md">Documentation</a>
   <span> · </span>
@@ -59,7 +59,7 @@
 <br />
 
 
-## <a>LIVE DEMO 💥</a>
+## <a href= "https://twitti-clone.vercel.app/">LIVE DEMO 💥</a>
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 ![forthebadge](https://forthebadge.com/images/badges/for-you.svg)

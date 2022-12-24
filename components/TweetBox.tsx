@@ -49,7 +49,7 @@ function TweetBox({ setTweets }: Props) {
         const newTweets = await fetchTweets()
         setTweets(newTweets)
 
-        toast('Tweet Posted', {
+        toast('Tweet Posted!', {
             icon: '🎉',
         })
 
