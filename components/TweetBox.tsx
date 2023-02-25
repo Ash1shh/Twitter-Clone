@@ -94,7 +94,7 @@ function TweetBox({ setTweets }: Props) {
                     </div>
                     {/* Image adding form  */}
                     {imageUrlBoxIsOpen && (
-                        <form className="rounded-lg mt-5 flex bg-twitter/80 py-2 px-4">
+                        <form className="rounded-lg mt-5 flex bg-twitter/70 py-2 px-4">
                             <input
                                 ref={imageInputRef}
                                 type="text"

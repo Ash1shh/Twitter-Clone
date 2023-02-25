@@ -9,13 +9,13 @@ import { fetchTweets } from '../utils/fetchTweets'
 import { Toaster } from 'react-hot-toast'
 
 interface Props {
-tweets: Tweet []
+  tweets: Tweet[]
 }
 
 
 const Home = ({ tweets }: Props) => {
   //console.log(tweets) 
-  
+
   return (
     <div className="mx-auto lg:max-w-6xl max-h-screen overflow-hidden">
       <Head>
@@ -24,12 +24,12 @@ const Home = ({ tweets }: Props) => {
       </Head>
       <Toaster />
       <main className="grid grid-cols-9">
-      
-      <Sidebar />
 
-      <Feed tweets= {tweets}/>
+        <Sidebar />
 
-      <Widgets />
+        <Feed tweets={tweets} />
+
+        <Widgets />
 
       </main>
     </div>

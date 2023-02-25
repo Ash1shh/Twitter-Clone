@@ -34,19 +34,23 @@ function Feed({ tweets: TweetsProp }: Props) {
             text-twitter transition-all duration-500 ease-out
             hover:rotate-180 active:scale-125" />
             </div>
+            <hr className="mt-4 border-0.5 border-gray-300" />
 
             {/* Tweetbox */}
             <div>
-                <TweetBox setTweets={setTweets}/>
+                <TweetBox setTweets={setTweets} />
             </div>
+            <hr className="border-0.5 border-gray-300" />
 
             {/* Feed */}
             <div>
                 {tweets.map(tweet => (
+                    <>
                     <TweetComponent key={tweet._id} tweet={tweet} />
+                    <hr className="border-0.5 border-gray-400/60" />
+                    </>
                 ))}
             </div>
-
         </div>
     )
 }
