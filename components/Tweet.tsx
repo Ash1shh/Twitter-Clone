@@ -53,7 +53,6 @@ function Tweet({ tweet }: Props) {
         setCommentBoxOpen(false);
         refreshComments()
     }
-
     return (
         <div className="flex flex-col space-x-3 border-y border-gray-100 p-5">
             <div className="flex space-x-3">
@@ -101,7 +100,7 @@ function Tweet({ tweet }: Props) {
                 </div>
 
                 <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
-                    <HeartIcon className="h-5 w-5" />
+                    <HeartIcon className="h-5 w-5"/>
                 </div>
 
                 <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
