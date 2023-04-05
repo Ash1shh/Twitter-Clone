@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Comment, CommentBody, Tweet } from '../typings'
+import { Comment, CommentBody, Like, Tweet } from '../typings'
 import TimeAgo from 'react-timeago'
 import { ChatBubbleOvalLeftIcon, HeartIcon, ArrowPathRoundedSquareIcon, ArrowUpTrayIcon } from '@heroicons/react/24/outline'
 import { fetchComments } from '../utils/fetchComments'
@@ -13,6 +13,7 @@ function Tweet({ tweet }: Props) {
     const [commentBoxOpen, setCommentBoxOpen] = useState<boolean>(false);
     const [input, setInput] = useState<string>('')
     const [comments, setComments] = useState<Comment[]>([])
+
     const { data: session } = useSession()
 
     const refreshComments = async () => {
@@ -65,7 +66,7 @@ function Tweet({ tweet }: Props) {
 
                 <div>
                     <div className="flex items-center space-x-1">
-                        <p className="mr-1 font-bold">{tweet.username}</p>
+                        <p className="mr-1 font-bold hover:underline">{tweet.username}</p>
                         <p className="hidden text-sm text-gray-500 sm:inline">
                             @{tweet.username.replace(/\s+/g, '').toLowerCase()} ·
                         </p>
@@ -101,6 +102,7 @@ function Tweet({ tweet }: Props) {
 
                 <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
                     <HeartIcon className="h-5 w-5"/>
+                    <p></p>
                 </div>
 
                 <div className="flex cursor-pointer items-center space-x-3 text-gray-500">

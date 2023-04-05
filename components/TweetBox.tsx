@@ -74,7 +74,7 @@ function TweetBox({ setTweets }: Props) {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="What's happening?"
-                        className="h-24 w-full text-xl outline-none placeholder:text-xl" />
+                        className="h-24 w-full text-xl outline-none placeholder:text-xl dark:bg-[#050505]" />
 
                     {/* Icons */}
                     <div className="flex items-center">

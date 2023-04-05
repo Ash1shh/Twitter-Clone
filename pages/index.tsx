@@ -17,21 +17,23 @@ const Home = ({ tweets }: Props) => {
   //console.log(tweets) 
 
   return (
-    <div className="mx-auto lg:max-w-6xl max-h-screen overflow-hidden">
-      <Head>
-        <title>Twitter Clone</title>
-        <link rel="icon" href="https://i0.wp.com/edinburghuniform.org/wp-content/uploads/2019/11/twitter-logo-png-twitter-logo-vector-png-clipart-library-518.png?fit=518%2C518&ssl=1" />
-      </Head>
-      <Toaster />
-      <main className="grid grid-cols-9">
+    <div className="dark:bg-black/70 h-screen overflow-hidden">
+      <div className="mx-auto lg:max-w-6xl max-h-screen overflow-hidden">
+        <Head>
+          <title>Twitter Clone</title>
+          <link rel="icon" href="https://i0.wp.com/edinburghuniform.org/wp-content/uploads/2019/11/twitter-logo-png-twitter-logo-vector-png-clipart-library-518.png?fit=518%2C518&ssl=1" />
+        </Head>
+        <Toaster />
+        <main className="grid grid-cols-9 ">
 
-        <Sidebar />
+          <Sidebar />
 
-        <Feed tweets={tweets} />
+          <Feed tweets={tweets} />
 
-        <Widgets />
+          <Widgets />
 
-      </main>
+        </main>
+      </div>
     </div>
   )
 }
