@@ -30,7 +30,7 @@ function Widgets() {
                         type="search"
                         name="search"
                         placeholder="Search Twitter"
-                        className="h-10 px-12 w-full rounded-full text-base focus:outline-none text-whitefont-bold shadow dark:bg-[#202326] text-gray-200"
+                        className="h-10 px-12 w-full rounded-full text-base focus:outline-none text-whitefont-bold shadow dark:bg-[#202326] text-gray-200 focus:ring-twitter focus:border-twitter focus:border"
                     />
                 </div>
 
