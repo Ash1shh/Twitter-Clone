@@ -40,14 +40,14 @@ function Feed({ tweets: TweetsProp }: Props) {
             <div>
                 <TweetBox setTweets={setTweets} />
             </div>
-            <hr className="border-0.5 border-gray-300" />
+            <hr className="border-0.5 border-gray-300 dark:border-none" />
 
             {/* Feed */}
             <div>
                 {tweets.map(tweet => (
                     <>
                     <TweetComponent key={tweet._id} tweet={tweet} />
-                    <hr className="border-0.5 border-gray-400/60" />
+                    <hr className="border-0.5 border-gray-400/60 dark:border-none" />
                     </>
                 ))}
             </div>

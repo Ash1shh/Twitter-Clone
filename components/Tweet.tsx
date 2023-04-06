@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Comment, CommentBody, Like, Tweet } from '../typings'
 import TimeAgo from 'react-timeago'
-import { ChatBubbleOvalLeftIcon, HeartIcon, ArrowPathRoundedSquareIcon, ArrowUpTrayIcon } from '@heroicons/react/24/outline'
+import { ChatBubbleOvalLeftIcon, HeartIcon, ArrowPathRoundedSquareIcon, ArrowUpTrayIcon, Bars3CenterLeftIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { fetchComments } from '../utils/fetchComments'
 import toast from 'react-hot-toast'
 import { useSession } from 'next-auth/react'
+import { faker } from '@faker-js/faker';
 interface Props {
     tweet: Tweet
 }
@@ -16,6 +17,8 @@ function Tweet({ tweet }: Props) {
 
     const { data: session } = useSession()
 
+    const letters = ['K', 'M'];
+    const randomIndex = faker.datatype.number({ min: 0, max: 1 });
     const refreshComments = async () => {
         const Comments: Comment[] = await fetchComments(tweet._id)
         setComments(Comments)
@@ -53,9 +56,10 @@ function Tweet({ tweet }: Props) {
         setInput('')
         setCommentBoxOpen(false);
         refreshComments()
+
     }
     return (
-        <div className="flex flex-col space-x-3 border-y border-gray-100 p-5">
+        <div className="flex flex-col space-x-3 border-t border-gray-100 p-5">
             <div className="flex space-x-3">
                 <img
                     className="h-10 w-10 rounded-full object-cover"
@@ -64,7 +68,7 @@ function Tweet({ tweet }: Props) {
                 />
 
 
-                <div>
+                <div className='w-full'>
                     <div className="flex items-center space-x-1">
                         <p className="mr-1 font-bold hover:underline">{tweet.username}</p>
                         <p className="hidden text-sm text-gray-500 sm:inline">
@@ -74,6 +78,13 @@ function Tweet({ tweet }: Props) {
                             className="text-sm text-gray-500"
                             date={tweet._createdAt}
                         />
+                        <div className='flex-1'>
+                            <a
+                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border hover:bg-twitter/20 ml-auto"
+                            >
+                                <EllipsisHorizontalIcon className='h-5' />
+                            </a>
+                        </div>
                     </div>
                     <p className="pt-1">{tweet.text}</p>
 
@@ -91,21 +102,33 @@ function Tweet({ tweet }: Props) {
                 <div
                     onClick={() => setCommentBoxOpen(!commentBoxOpen)}
                     // onClick={() => setCommentBoxVisible(!commentBoxVisible)}
-                    className="flex cursor-pointer items-center space-x-3 text-gray-500">
-                    <ChatBubbleOvalLeftIcon className="h-5 w-5" />
+                    className="flex cursor-pointer items-center space-x-3 text-gray-500 hover:text-twitter">
+                    <ChatBubbleOvalLeftIcon className="h-5 w-5 " />
                     <p>{comments.length}</p>
                 </div>
 
-                <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
+                <div className="flex cursor-pointer items-center space-x-3 text-gray-500 hover:text-[#01BA7C]">
                     <ArrowPathRoundedSquareIcon className="h-5 w-5" />
+                    <p>
+                        {parseFloat(faker.finance.amount(1, 20, 1))}{letters[randomIndex]}
+                    </p>
                 </div>
 
-                <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
-                    <HeartIcon className="h-5 w-5"/>
-                    <p></p>
+                <div className="flex cursor-pointer items-center space-x-3 text-gray-500 hover:text-[#DF1672]">
+                    <HeartIcon className="h-5 w-5" />
+                    <p>
+                        {parseFloat(faker.finance.amount(1, 20, 1))}{letters[randomIndex]}
+                    </p>
                 </div>
 
-                <div className="flex cursor-pointer items-center space-x-3 text-gray-500">
+                <div className="flex cursor-pointer items-center space-x-3 text-gray-500 hover:text-twitter">
+                    <Bars3CenterLeftIcon className="h-5 w-5 -rotate-90" />
+                    <p>
+                        {parseFloat(faker.finance.amount(1, 20, 1))}{letters[randomIndex]}
+                    </p>
+                </div>
+
+                <div className="flex cursor-pointer items-center space-x-3 text-gray-500 hover:text-twitter">
                     <ArrowUpTrayIcon className="h-5 w-5" />
                 </div>
             </div>
@@ -119,7 +142,7 @@ function Tweet({ tweet }: Props) {
                             <input
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                className="flex-1 rounded-lg bg-gray-100 p-2 outline-none"
+                                className="flex-1 rounded-lg bg-gray-100 p-2 outline-none dark:bg-[#202326]"
                                 type="text"
                                 placeholder="Write a comment..."
                             />

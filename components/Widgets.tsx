@@ -57,8 +57,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a
-                                href=""
-                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border "
+                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border hover:bg-twitter/20"
                             >
                                 <EllipsisHorizontalIcon className='h-5' />
                             </a>
@@ -79,8 +78,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a
-                                href=""
-                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border"
+                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border hover:bg-twitter/20"
                             >
                                 <EllipsisHorizontalIcon className='h-5' />
                             </a>
@@ -101,7 +99,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a
-                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border"
+                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border hover:bg-twitter/20"
                             >
                                 <EllipsisHorizontalIcon className='h-5' />
                             </a>
@@ -122,7 +120,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a
-                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border"
+                                className="text-2xl rounded-full text-[#70767B] hover:text-twitter float-right hover:border-twitter hover:border hover:bg-twitter/20"
                             >
                                 <EllipsisHorizontalIcon className='h-5' />
                             </a>
@@ -170,7 +168,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a href="" className="float-right">
-                                <button className="bg-transparent text-gray-500 font-semibold py-1 px-4 border border-gray-300 hover:border-transparent rounded-full dark:text-black dark:bg-white">
+                                <button className="bg-black text-white font-semibold py-1 px-4 rounded-full dark:text-black dark:bg-white">
                                     Follow
                                 </button>
                             </a>
@@ -199,7 +197,7 @@ function Widgets() {
                         </div>
                         <div className="px-4 py-2 m-2">
                             <a href="#" className="float-right">
-                                <button className="bg-transparent text-gray-500 font-semibold py-1 px-4 border border-gray-300 hover:border-transparent rounded-full dark:text-black dark:bg-white">
+                                <button className="bg-black text-white font-semibold py-1 px-4 rounded-full dark:text-black dark:bg-white">
                                     Follow
                                 </button>
                             </a>
