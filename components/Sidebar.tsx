@@ -38,7 +38,7 @@ function Sidebar() {
             </div>
             {session ? (
                 <div className='flex max-w-fit cursor-pointer items-center space-x-3 rounded-full px-4 py-3 transition-all duration-200 hover:dark:bg-[#202326] mb-4'>
-                    <img className="h-10 w-10 rounded-full object-cover" src={session?.user?.image} alt="" />
+                    <img className="h-10 w-10 rounded-full object-cover" src={session?.user?.image || "https://www.marismith.com/wp-content/uploads/2014/07/facebook-profile-blank-face.jpeg"} alt="" />
                     <div className='flex flex-col'>
                         <p className="hidden mr-1 font-bold sm:inline">{session?.user?.name}</p>
                         <p className="hidden text-sm text-gray-500 sm:inline">
