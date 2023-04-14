@@ -5,7 +5,7 @@
 # Twitter-Clone with REACT.JS!
   
   <p>
-   Twitter-Clone with REACT.JS! (Next.js, Sanity CMS, Typescript, SSR, Tailwind, NextAuth)
+   Twitter-Clone with REACT.JS! (Next.js, Sanity CMS, Typescript, SSR, Tailwind, NextAuth, Dark Mode & Light Mode)
   </p>
   
   
@@ -38,9 +38,9 @@
 - [About the Project](#star2-about-the-project)
   * [Screenshots](#camera-screenshots)
   * [Tech Stack](#space_invader-tech-stack)
-  * [Environment Variables](#key-environment-variables)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
+  * [Environment Variables](#key-environment-variables)
   * [Installation](#gear-installation)
   * [Run Locally](#running-run-locally)
   * [Deployment](#triangular_flag_on_post-deployment)
@@ -53,7 +53,10 @@
 ### :camera: Screenshots
 
 <div align="center" display='flex'>
-<img width='800rem'  src='https://user-images.githubusercontent.com/87669361/204130306-b620935a-c281-414d-84f2-1847041597fd.jpg' alt='image'/>
+<img width='800rem'  src='https://user-images.githubusercontent.com/87669361/232032684-3acd46a4-cf21-436b-883f-da6d6ab587e8.jpg' alt='image'/>
+</div>
+<div align="center" display='flex'>
+<img width='800rem'  src='https://user-images.githubusercontent.com/87669361/232032704-f5b161ad-5be5-41ab-a401-9176c7568717.jpg' alt='image'/>
 </div>
 
 <br />
@@ -122,26 +125,6 @@
 - Sign up for a Sanity account <a href='https://www.sanity.io'>HERE</a>
 - Install Node JS in your computer <a href='https://nodejs.org/en/'>HERE</a>
 
-
-<!-- Run Locally -->
-### :running: Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/Ash1shh/Twitter-Clone.git
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-Start the server
-
-```bash
-  npm run dev
-```
 <!-- Env Variables -->
 ### :key: Environment Variables
 
@@ -169,12 +152,90 @@ To run this project, you will need to add the following environment variables to
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### :gear: Installation
 
-<hr />
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![](https://img.shields.io/badge/next.js-20232A?style=for-the-badge&logo=next.js&logoColor=61DAFB)
+
+Install my-project with npm
+```
+npx create-next-app@latest my-project --typescript --eslint
+```
+```
+cd my-project
+```
+
+Install dependencies
+
+### :test_tube: Install Tailwind CSS with Next.js
+#### Install Tailwind CSS
+![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both ``tailwind.config.js`` and ``postcss.config.js``.
+
+```
+npm install -D tailwindcss postcss autoprefixer
+```
+```
+npx tailwindcss init -p
+```
+#### Configure your template paths
+Add the paths to all of your template files in your ``tailwind.config.js`` file.
+<br>
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+#### Add the Tailwind directives to your CSS
+Add the ``@tailwind`` directives for each of Tailwind’s layers to your ``./styles/globals.css`` file.
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+Install dependencies
+
+<a href="https://github.com/SashenJayathilaka/Twitter-2-0-Clone/blob/master/package.json" target="_blank">🔶 Dependency Info</a>
+<!-- Run Locally -->
+### :running: Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Ash1shh/Twitter-Clone.git
+```
+
+Change Directory
+
+```bash
+  cd Twitter-Clone
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+Start the server
+
+```bash
+  npm run dev
+```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-<hr />
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -194,7 +255,7 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 <!-- Deployment -->
-### :triangular_flag_on_post: Deployment
+## :triangular_flag_on_post: Deployment
 
 To deploy this project run
 
@@ -210,3 +271,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Ashish - [@twitter pluto0p](https://twitter.com/pluto0p) - Ashishchandra8328@gmail.com
 
+<hr />
+<br />
+
+<div align="center">If you find what you see appealing, please feel free to give this repository a ⭐ star.😉 <br />
+appreciate you!
+</div>
