@@ -25,7 +25,7 @@ function Feed({ tweets: TweetsProp }: Props) {
     }
 
     return (
-        <div className="col-span-7 max-h-screen overflow-scroll scrollbar-hide lg:col-span-5 border-x">
+        <div className="col-span-7 max-h-screen overflow-scroll scrollbar-hide lg:col-span-5 border-x border-[#2F3336]">
 
             {/* RefreshIcon */}
             <div className="flex items-center justify-between">
@@ -34,20 +34,19 @@ function Feed({ tweets: TweetsProp }: Props) {
             text-twitter transition-all duration-500 ease-out
             hover:rotate-180 active:scale-125" />
             </div>
-            <hr className="mt-4 border-0.5 border-gray-300" />
+            <hr className="mt-4 border dark:border-[#2F3336]" />
 
             {/* Tweetbox */}
             <div>
                 <TweetBox setTweets={setTweets} />
             </div>
-            <hr className="border-0.5 border-gray-300 dark:border-none" />
 
             {/* Feed */}
             <div>
                 {tweets.map(tweet => (
                     <>
                     <TweetComponent key={tweet._id} tweet={tweet} />
-                    <hr className="border-0.5 border-gray-400/60 dark:border-none" />
+                    <hr className="border dark:border-[#2F3336]" />
                     </>
                 ))}
             </div>

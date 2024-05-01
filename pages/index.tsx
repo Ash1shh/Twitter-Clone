@@ -21,7 +21,7 @@ const Home = ({ tweets }: Props) => {
       <div className="mx-auto lg:max-w-6xl max-h-screen overflow-hidden">
         <Head>
           <title>Twitter Clone</title>
-          <link rel="icon" href="https://i0.wp.com/edinburghuniform.org/wp-content/uploads/2019/11/twitter-logo-png-twitter-logo-vector-png-clipart-library-518.png?fit=518%2C518&ssl=1" />
+          <link rel="icon" href="https://imgs.search.brave.com/yA3nvunvkQeysiPRFk8qDlRryft2RXyI7AocZDiXwWg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5nbG9nby5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MTgzMjQ2/MHgtdHdpdHRlci1s/b2dvLXBuZy5wbmc" />
         </Head>
         <Toaster />
         <main className="grid grid-cols-9 ">

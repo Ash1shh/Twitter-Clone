@@ -59,7 +59,7 @@ function Tweet({ tweet }: Props) {
 
     }
     return (
-        <div className="flex flex-col space-x-3 border-t border-gray-100 p-5">
+        <div className="flex flex-col space-x-3 border-t border-[#2F3336] p-5">
             <div className="flex space-x-3">
                 <img
                     className="h-10 w-10 rounded-full object-cover"

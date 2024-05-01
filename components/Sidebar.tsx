@@ -22,7 +22,7 @@ function Sidebar() {
             <div className='flex flex-col item-center px-4 md:items-start cursor-pointer space-y-1'>
                 <img
                     className="m-3 h-10 w-10"
-                    src="https://i0.wp.com/edinburghuniform.org/wp-content/uploads/2019/11/twitter-logo-png-twitter-logo-vector-png-clipart-library-518.png?fit=518%2C518&ssl=1"
+                    src="https://imgs.search.brave.com/yA3nvunvkQeysiPRFk8qDlRryft2RXyI7AocZDiXwWg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5nbG9nby5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MTgzMjQ2/MHgtdHdpdHRlci1s/b2dvLXBuZy5wbmc"
                     alt=""
                 />
 
